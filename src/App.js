@@ -20,7 +20,6 @@ const store = createStore(
 	)
 );
 
-//import { Examples } from '@shoutem/ui';
 
 const LoginOrChat = connect((state) => ({
 	authorized: state.user.authorized

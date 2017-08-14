@@ -31,7 +31,7 @@ const message = (state, action) => {
 const messages = (state = [], action) => {
 	switch (action.type){
 		case 'ADD_MESSAGE':
-			if(state.map(m => m.id).includes(action.id)){/*Condtional Checking if action.id is present on state array or not*/
+			if(state.map(m => m.id).includes(action.id)){/*Condtional Checking if action.id is present on state array or not; include gives true/false */
 				return state;
 			}
 			else{

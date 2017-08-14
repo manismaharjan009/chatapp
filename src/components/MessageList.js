@@ -1,17 +1,19 @@
 import React, {Component} from 'react';
 import moment from 'moment';
-import {
-	ListView,
-	Text,
-	Row,
-	Image,
-	View,
+import {	
+	Row,	
 	Subtitle,
 	Caption,
-	Heading
+	Heading,
+	
+	Image,
+	View,
+	ListView,
+	Text,
+	StyleSheet
 } from 'react-native';
 
-const Message = ({msg}) => (
+/*const Message = ({msg}) => (
 	<Row>
 		<Image styleName="small-avatar top" source={{uri: msg.author.avatar}} />
 		<View styleName="vertical">
@@ -22,7 +24,27 @@ const Message = ({msg}) => (
 			<Text styleName="multiline">{msg.text}</Text>
 		</View>
 	</Row>
+);*/
+
+
+const Message = ({msg}) => (
+
+	<View>
+		<Image style={styles.smallAvatar} source={{uri: msg.author.avatar}}/>
+	</View>
+
 );
+
+
+const styles = StyleSheet.create({
+
+	smallAvatar: {
+
+	}
+
+});
+
+
 
 const MessageList = ({messages, onLayout}) => (
 	<ListView data={messages} 
